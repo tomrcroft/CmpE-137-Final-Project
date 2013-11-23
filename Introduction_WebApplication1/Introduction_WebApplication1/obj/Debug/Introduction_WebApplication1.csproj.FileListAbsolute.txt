@@ -3,3 +3,8 @@ D:\Code\CmpE-137-Final-Project\Introduction_WebApplication1\Introduction_WebAppl
 D:\Code\CmpE-137-Final-Project\Introduction_WebApplication1\Introduction_WebApplication1\obj\Debug\Introduction_WebApplication1.csprojResolveAssemblyReference.cache
 D:\Code\CmpE-137-Final-Project\Introduction_WebApplication1\Introduction_WebApplication1\obj\Debug\Introduction_WebApplication1.dll
 D:\Code\CmpE-137-Final-Project\Introduction_WebApplication1\Introduction_WebApplication1\obj\Debug\Introduction_WebApplication1.pdb
+C:\Users\David Hsu\Documents\GitHub\CmpE-137-Final-Project\Introduction_WebApplication1\Introduction_WebApplication1\bin\Introduction_WebApplication1.dll
+C:\Users\David Hsu\Documents\GitHub\CmpE-137-Final-Project\Introduction_WebApplication1\Introduction_WebApplication1\bin\Introduction_WebApplication1.pdb
+C:\Users\David Hsu\Documents\GitHub\CmpE-137-Final-Project\Introduction_WebApplication1\Introduction_WebApplication1\obj\Debug\Introduction_WebApplication1.csprojResolveAssemblyReference.cache
+C:\Users\David Hsu\Documents\GitHub\CmpE-137-Final-Project\Introduction_WebApplication1\Introduction_WebApplication1\obj\Debug\Introduction_WebApplication1.dll
+C:\Users\David Hsu\Documents\GitHub\CmpE-137-Final-Project\Introduction_WebApplication1\Introduction_WebApplication1\obj\Debug\Introduction_WebApplication1.pdb

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Introduction_WebApplication1.WebForm1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="Introduction_WebApplication1.Register" %>
 
 <!DOCTYPE html>
 
@@ -9,9 +9,8 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        Hello World!
+    
     </div>
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
     </form>
 </body>
 </html>

@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Introduction_WebApplication1
 {
-    public partial class WebForm2 : System.Web.UI.Page
+    public partial class Login : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -15,8 +15,8 @@ namespace Introduction_WebApplication1
         }
 
         protected void Login1_Authenticate(object sender, AuthenticateEventArgs e)
-        { 
-        
+        {
+
         }
     }
 }

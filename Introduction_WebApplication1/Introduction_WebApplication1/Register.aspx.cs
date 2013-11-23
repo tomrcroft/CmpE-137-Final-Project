@@ -7,11 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace Introduction_WebApplication1
 {
-    public partial class WebForm1 : System.Web.UI.Page
+    public partial class Register : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            TextBox1.Text = Session["test"].ToString();
+
         }
     }
 }

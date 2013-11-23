@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm2.aspx.cs" Inherits="Introduction_WebApplication1.WebForm2" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Introduction_WebApplication1.Login" %>
 
 <!DOCTYPE html>
 
@@ -8,8 +8,12 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <asp:Login ID="Login1" runat="server" onAuthenticate = "Login1_Authenticate"> 
+    <div>
+    
+        <asp:Login ID="Login1" runat="server" OnAuthenticate="Login1_Authenticate">
         </asp:Login>
+    
+    </div>
     </form>
 </body>
 </html>
