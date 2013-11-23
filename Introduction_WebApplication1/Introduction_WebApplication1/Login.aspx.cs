@@ -14,10 +14,9 @@ namespace Introduction_WebApplication1
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            Session["test"] = TextBox1.Text;
-            Response.Redirect("Default.aspx");
+        protected void Login1_Authenticate(object sender, AuthenticateEventArgs e)
+        { 
+        
         }
     }
 }
