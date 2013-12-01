@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data.SqlClient;
 
 namespace Introduction_WebApplication1
 {
@@ -18,5 +19,59 @@ namespace Introduction_WebApplication1
         {
 
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            /*SqlConnection myConnection = new SqlConnection("user id=username;" +
+                                       "password=password;server=localhost;" +
+                                       "Trusted_Connection=yes;" +
+                                       "database=Login; " +
+                                       "connection timeout=30");*/
+
+            /*SqlConnection myConnection = new SqlConnection("user id=DAVIDHSU-PC;" +
+                                       "server=localhost;" +
+                                       "Trusted_Connection=yes;" +
+                                       "database=Lab4; " +
+                                       "connection timeout=30");*/
+
+            SqlConnection myConnection = new SqlConnection("user id=DAVIDHSU-PC;" +
+                                       "server=localhost;" +
+                                       "Trusted_Connection=yes;" +
+                                       "database=FinalProject; " +
+                                       "connection timeout=30");
+
+            //Data Source=DAVIDHSU-PC;Initial Catalog=Lab4;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False
+
+            try
+            {
+                myConnection.Open();
+            }
+            finally
+            {
+
+            }
+
+            //SqlCommand myCommand = new SqlCommand("Use Login; Select Password from Username where Username='" + TextBox1.Text + "';", myConnection);
+            //SqlCommand myCommand = new SqlCommand("Use Lab4; Select UserPassword from UserTable where UserName='" + TextBox1.Text + "';", myConnection);
+            SqlCommand myCommand = new SqlCommand("Use FinalProject; Select Password from Users where Username='" + TextBox1.Text + "';", myConnection);
+            SqlDataReader myReader = myCommand.ExecuteReader();
+            while (myReader.Read())
+            {
+                if (myReader["Password"].ToString() == TextBox2.Text)
+                //if (myReader["UserPassword"].ToString() == TextBox2.Text)
+                {
+                    Response.Redirect("ListPOIs.aspx");
+                }
+                else
+                {
+                    TextBox3.Text = "Invalid Username or Password.";
+                    TextBox3.Visible = true;
+                }
+            }
+            TextBox3.Text = "Invalid Username or Password.";
+            TextBox3.Visible = true;
+
+        }
+
     }
 }
