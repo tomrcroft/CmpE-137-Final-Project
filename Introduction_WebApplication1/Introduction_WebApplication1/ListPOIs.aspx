@@ -10,6 +10,39 @@
     <form id="form1" runat="server">
     <div>
     
+        <br />
+        ==========================================================<br />
+    
+        <br />
+        || &lt;&lt; || Welcome to the Web-Based Student Social Mobile Framework!&nbsp; || &gt;&gt; ||<br />
+        <br />
+        ~ ~
+        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="Login.aspx">Logout</asp:HyperLink>
+        &nbsp;~ ~<br />
+        <br />
+        ==========================================================<br />
+        <br />
+        <br />
+        -------------------------------------------------------------------------------------------------------<br />
+        <br />
+        <br />
+        &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<br />
+        &gt;&gt;Find out about your favorite places by selecting designated locations listed below:<br />
+        &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+    
     </div>
     </form>
 </body>
