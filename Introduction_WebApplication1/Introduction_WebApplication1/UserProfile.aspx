@@ -10,7 +10,10 @@
     <form id="form1" runat="server">
     <div>
     
-    </div>
+        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ~ ~
+        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="ListPOIs.aspx">Return to the List of POIs</asp:HyperLink>
+&nbsp;~ ~</div>
         <p>
             Welcome
             <asp:Label ID="Label1" runat="server"></asp:Label>
