@@ -24,7 +24,8 @@ namespace Introduction_WebApplication1
         {
             if (TextBox2.Text == TextBox3.Text)
             {
-                  SqlConnection myConnection = new SqlConnection("user id=xaigamer;" +
+               //SqlConnection myConnection = new SqlConnection("user id=xaigamer;" +
+                SqlConnection myConnection = new SqlConnection("user id=DavidHsu-PC;" +
                                        "server=localhost;" +
                                        "Trusted_Connection=yes;" +
                                        "database=FinalProject; " +
@@ -43,6 +44,11 @@ namespace Introduction_WebApplication1
                 {
                     myCommand.ExecuteNonQuery();
                     //TextBox4.Text = "User registered";
+
+                    Session["Username"] = TextBox1.Text;                    
+                    Response.Redirect("ListPOIs.aspx");                    
+                    //Response.Redirect("ListPOIs.aspx");
+
                     Session["Username"] = TextBox1.Text;
                     Response.Redirect("ListPOIs.aspx");
         
