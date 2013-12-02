@@ -18,7 +18,11 @@
         <br />
         ~ ~
         <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="Login.aspx">Logout</asp:HyperLink>
-        &nbsp;~ ~<br />
+        &nbsp;~ ~ &nbsp; &nbsp;
+         ~ ~
+        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="UserProfile.aspx">My Profile</asp:HyperLink>
+        &nbsp;~ ~<br /><br />
+
         <br />
         ==========================================================<br />
         <br />

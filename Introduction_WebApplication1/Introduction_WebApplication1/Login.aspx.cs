@@ -25,7 +25,7 @@ namespace Introduction_WebApplication1
          //  SqlConnection myConnection = new SqlConnection("user id=xaigamer;" +
                                        "server=localhost;" +
                                        "Trusted_Connection=yes;" +
-        //                            "database=FinalProject; " +
+         //                              "database=FinalProject; " +
                                        "connection timeout=30");
             try
             {
@@ -35,16 +35,13 @@ namespace Introduction_WebApplication1
             {
 
             }
-
-            //SqlCommand myCommand = new SqlCommand("Use Login; Select Password from Username where Username='" + TextBox1.Text + "';", myConnection);
-            //SqlCommand myCommand = new SqlCommand("Use Lab4; Select UserPassword from UserTable where UserName='" + TextBox1.Text + "';", myConnection);
             SqlCommand myCommand = new SqlCommand("Use FinalProject; Select Password from Users where Username='" + TextBox1.Text + "';", myConnection);
             SqlDataReader myReader = myCommand.ExecuteReader();
             while (myReader.Read())
             {
                 if (myReader["Password"].ToString() == TextBox2.Text)
-                //if (myReader["UserPassword"].ToString() == TextBox2.Text)
                 {
+                    Session["Username"] = TextBox1.Text;
                     Response.Redirect("ListPOIs.aspx");
                 }
                 else
