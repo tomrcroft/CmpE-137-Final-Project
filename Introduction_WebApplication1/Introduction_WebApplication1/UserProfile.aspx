@@ -45,7 +45,7 @@
         </p>
         <asp:Button ID="Update" runat="server" OnClick="Update_Click" Text="Update" />
 &nbsp;
-        <asp:TextBox ID="TextBox1" runat="server" BorderWidth="0px" ReadOnly="True"> </asp:TextBox>
+        <asp:TextBox ID="TextBox1" runat="server" BorderWidth="0px" ReadOnly="True" Width="535px"></asp:TextBox>
     </form>
 </body>
 </html>

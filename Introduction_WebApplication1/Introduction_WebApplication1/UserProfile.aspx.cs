@@ -14,14 +14,44 @@ namespace Introduction_WebApplication1
         {
             Label1.Text = Session["Username"].ToString();
 
+            SqlConnection myConnection = new SqlConnection("user id=xaigamer;" +
+                                   "server=localhost;" +
+                                   "Trusted_Connection=yes;" +
+                                   "database=FinalProject; " +
+                                   "connection timeout=30");
+            try
+            {
+                myConnection.Open();
+            }
+            finally
+            {
+
+            }
+            SqlCommand myCommand = new SqlCommand("SELECT * FROM Users WHERE Username ='"+Label1.Text+"';", myConnection);
+            try
+            {
+                SqlDataReader userprofile = myCommand.ExecuteReader();
+                userprofile.Read();
+                    //indented for visbility
+                    Name.Text = userprofile["Name"].ToString();
+                    Gender.Text = userprofile["Gender"].ToString();
+                    Birthdate.Text = userprofile["Birthdate"].ToString();
+                    Email.Text = userprofile["Email"].ToString();
+                myConnection.Close();
+
+            }
+            catch (SqlException sqlerror)
+            {
+                TextBox1.Text = "An Error Occurred When Loading. Please Try Again.";
+            }
         }
 
         protected void Update_Click(object sender, EventArgs e)
         {
-             //   SqlConnection myConnection = new SqlConnection("user id=xaigamer;" +
+               SqlConnection myConnection = new SqlConnection("user id=xaigamer;" +
                                      "server=localhost;" +
                                      "Trusted_Connection=yes;" +
-             //                        "database=FinalProject; " +
+                                     "database=FinalProject; " +
                                      "connection timeout=30");
                 try
                 {
@@ -31,25 +61,22 @@ namespace Introduction_WebApplication1
                 {
 
                 }
-
-                //SqlCommand myCommand = new SqlCommand("UPDATE Users SET Name=' WHERE Username ='"+Session["Username"].ToString()+"';", myConnection);
+                SqlCommand myCommand = new SqlCommand("UPDATE Users SET Name='" + Name.Text +
+                    "', Email='" + Email.Text + "', Gender='" + Gender.Text + "', Birthdate='" + Birthdate.Text +
+                    "' WHERE Username ='" + Session["Username"].ToString() + "';", myConnection);
                 try
                 {
                     myCommand.ExecuteNonQuery();
-                    //TextBox4.Text = "User registered";
                     TextBox1.Text = "Profile Updated!";
- 
+                    myConnection.Close();
 
                 }
                 catch (SqlException sqlerror)
                 {
-                    TextBox4.Text = "Username is already taken";
+                    TextBox1.Text = "An Error Occurred When Updating. Please Try Again.";
                 }
             
-            else
-            {
-                TextBox4.Text = "Your Passwords do not match.";
-            }
+     
         }
 
         
