@@ -26,7 +26,7 @@
         <br />
         <br />
 &nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="TextBox3" runat="server" Width="208px"></asp:TextBox>
+        <asp:TextBox ID="TextBox3" runat="server" Width="208px" BorderColor="White" BorderWidth="0px" ReadOnly="True"></asp:TextBox>
         <br />
         <br />
     
