@@ -22,11 +22,14 @@ namespace Introduction_WebApplication1
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            SqlConnection myConnection = new SqlConnection("user id=xaigamer;" +
+            SqlConnection myConnection = new SqlConnection("user id=DavidHsu-PC;" +
                                        "server=localhost;" +
                                        "Trusted_Connection=yes;" +
                                        "database=FinalProject; " +
                                        "connection timeout=30");
+
+            //xaigamer
+
             try
             {
                 myConnection.Open();
@@ -45,6 +48,7 @@ namespace Introduction_WebApplication1
                 if (myReader["Password"].ToString() == TextBox2.Text)
                 //if (myReader["UserPassword"].ToString() == TextBox2.Text)
                 {
+                    Session["Username"] = TextBox1.Text;
                     Response.Redirect("ListPOIs.aspx");
                 }
                 else
