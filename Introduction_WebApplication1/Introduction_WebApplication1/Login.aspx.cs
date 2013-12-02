@@ -22,10 +22,14 @@ namespace Introduction_WebApplication1
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             SqlConnection myConnection = new SqlConnection("user id=DavidHsu-PC;" +
+=======
+         //  SqlConnection myConnection = new SqlConnection("user id=xaigamer;" +
+>>>>>>> a414938246d65333a19d4026b8cbaf3dbf9e36c8
                                        "server=localhost;" +
                                        "Trusted_Connection=yes;" +
-                                       "database=FinalProject; " +
+        //                            "database=FinalProject; " +
                                        "connection timeout=30");
 
             //xaigamer

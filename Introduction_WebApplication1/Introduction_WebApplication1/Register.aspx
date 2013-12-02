@@ -26,7 +26,7 @@
         <asp:Button ID="Button1" runat="server" Text="Finish." OnClick="Button1_Click" />
         <br />
         <br />
-        <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+        <asp:TextBox ID="TextBox4" runat="server" BorderColor="White" BorderWidth="0px" ReadOnly="True" Width="312px"></asp:TextBox>
         <br />
         <br />
         <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="Login.aspx">Logout.</asp:HyperLink>
