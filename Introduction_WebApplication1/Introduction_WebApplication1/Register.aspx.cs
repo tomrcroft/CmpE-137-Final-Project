@@ -24,7 +24,7 @@ namespace Introduction_WebApplication1
         {
             if (TextBox2.Text == TextBox3.Text)
             {
-                SqlConnection myConnection = new SqlConnection("user id=DAVIDHSU-PC;" +
+                SqlConnection myConnection = new SqlConnection("user id=xaigamer;" +
                                        "server=localhost;" +
                                        "Trusted_Connection=yes;" +
                                        "database=FinalProject; " +
