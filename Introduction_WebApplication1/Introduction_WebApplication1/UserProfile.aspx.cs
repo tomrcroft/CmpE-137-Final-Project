@@ -14,10 +14,10 @@ namespace Introduction_WebApplication1
         {
             Label1.Text = Session["Username"].ToString();
 
-            SqlConnection myConnection = new SqlConnection("user id=xaigamer;" +
+        //    SqlConnection myConnection = new SqlConnection("user id=xaigamer;" +
                                    "server=localhost;" +
                                    "Trusted_Connection=yes;" +
-                                   "database=FinalProject; " +
+        //                           "database=FinalProject; " +
                                    "connection timeout=30");
             try
             {
@@ -48,10 +48,10 @@ namespace Introduction_WebApplication1
 
         protected void Update_Click(object sender, EventArgs e)
         {
-               SqlConnection myConnection = new SqlConnection("user id=xaigamer;" +
+            //   SqlConnection myConnection = new SqlConnection("user id=xaigamer;" +
                                      "server=localhost;" +
                                      "Trusted_Connection=yes;" +
-                                     "database=FinalProject; " +
+             //                        "database=FinalProject; " +
                                      "connection timeout=30");
                 try
                 {

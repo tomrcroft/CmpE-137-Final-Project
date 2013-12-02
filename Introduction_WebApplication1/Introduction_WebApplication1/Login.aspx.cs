@@ -22,30 +22,15 @@ namespace Introduction_WebApplication1
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-        //  SqlConnection myConnection = new SqlConnection("user id=xaigamer;" +
-            SqlConnection myConnection = new SqlConnection("user id=DavidHsu-PC;" +
-=======
-<<<<<<< HEAD
-            //SqlConnection myConnection = new SqlConnection("user id=xaigamer;" +
-                        SqlConnection myConnection = new SqlConnection("user id=TOMLAPTOP-HP\\SQLEXPRESS;" +
 
-=======
-<<<<<<< HEAD
-            SqlConnection myConnection = new SqlConnection("user id=DavidHsu-PC;" +
         //  SqlConnection myConnection = new SqlConnection("user id=xaigamer;" +
-=======
-          //  SqlConnection myConnection = new SqlConnection("user id=DavidHsu-PC;" +
-              SqlConnection myConnection = new SqlConnection("user id=xaigamer;" +
->>>>>>> 2c6848a2ca494314deb7e7eb87b4332b5687957a
->>>>>>> ed5169a4faf2ac471f82a67b19b66258caa1db69
->>>>>>> 17e22ed0658484a211f10f4a22a89b5576f57268
-                                       "server=localhost;" +
-                                       "Trusted_Connection=yes;" +
-            //                           "database=FinalProject; " +
-                                                   "database=CMPE137project; " +
-
-                                       "connection timeout=30");
+         // SqlConnection myConnection = new SqlConnection("user id=DavidHsu-PC;" +
+         // SqlConnection myConnection = new SqlConnection("user id=TOMLAPTOP-HP\\SQLEXPRESS;" +
+                                "server=localhost;" +
+                                "Trusted_Connection=yes;" +
+            //                  "database=FinalProject; " +
+           //                   "database=CMPE137project;
+                                "connection timeout=30");
 
             try
             {
