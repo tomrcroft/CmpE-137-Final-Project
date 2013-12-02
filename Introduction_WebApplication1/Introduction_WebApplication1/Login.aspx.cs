@@ -22,11 +22,16 @@ namespace Introduction_WebApplication1
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            SqlConnection myConnection = new SqlConnection("user id=xaigamer;" +
+            //SqlConnection myConnection = new SqlConnection("user id=xaigamer;" +
+                        SqlConnection myConnection = new SqlConnection("user id=TOMLAPTOP-HP\\SQLEXPRESS;" +
+
                                        "server=localhost;" +
                                        "Trusted_Connection=yes;" +
-                                       "database=FinalProject; " +
+            //                           "database=FinalProject; " +
+                                                   "database=CMPE137project; " +
+
                                        "connection timeout=30");
+
             try
             {
                 myConnection.Open();
