@@ -39,17 +39,17 @@
         &gt;&gt;Find out about your favorite places by selecting designated locations listed below:<br />
         &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<br />
         <br />
-        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="POIdetails.aspx">The Engineering Building</asp:HyperLink>
+        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="POIdetails.aspx">The Engineering Building</asp:HyperLink>
         <br />
         <br />
-        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="POIdetails.aspx">The MLK Library</asp:HyperLink>
+        <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="POIdetails.aspx">The MLK Library</asp:HyperLink>
         <br />
         <br />
-        <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="POIdetails.aspx">The Student Union</asp:HyperLink>
+        <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="POIdetails.aspx">The Student Union</asp:HyperLink>
         <br />
         <br />
         <br />
-        /*-------------------------------------------------------------------------------------------------------*/<br />
+        /*-------------------------------------------------------------------------------------------------------*/---------*/<br />
         <br />
         <br />
         <br />
