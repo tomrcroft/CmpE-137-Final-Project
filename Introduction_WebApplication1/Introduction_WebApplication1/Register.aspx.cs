@@ -46,13 +46,9 @@ namespace Introduction_WebApplication1
                 {
                     myCommand.ExecuteNonQuery();
                     //TextBox4.Text = "User registered";
-                    Session["Username"] = TextBox1.Text;
-<<<<<<< HEAD
+                    Session["Username"] = TextBox1.Text;                    
                     Response.Redirect("ListPOIs.aspx");                    
-=======
-                    Response.Redirect("ListPOIs.aspx");
-        
->>>>>>> a414938246d65333a19d4026b8cbaf3dbf9e36c8
+                    //Response.Redirect("ListPOIs.aspx");
                 }
                 catch(SqlException sqlerror)
                 {
