@@ -22,6 +22,8 @@
         <asp:TextBox ID="TextBox3" runat="server" TextMode="Password"></asp:TextBox>
 &nbsp;Re-Enter the New Password.<br />
         <br />
+        <br />
+        <br />
 &nbsp;&nbsp;&nbsp;
         <asp:Button ID="Button1" runat="server" Text="Finish." OnClick="Button1_Click" />
         <br />
