@@ -26,9 +26,9 @@
         </p>
         <p>
             Birthdate:&nbsp; <asp:TextBox ID="Birthdate" runat="server"></asp:TextBox>
-&nbsp;ex: Month/Date/Year (12/31/2013)</p>
+&nbsp;(ex: Month/Date/Year (12/31/2013)</p>
         <p>
-            Gender:&nbsp;&nbsp;&nbsp;&nbsp; <asp:RadioButtonList ID="Gender" runat="server">
+            Gender:&nbsp;&nbsp;&nbsp;&nbsp; <asp:RadioButtonList ID="Gender" runat="server" OnSelectedIndexChanged="Gender_SelectedIndexChanged">
                 <asp:ListItem>Female</asp:ListItem>
                 <asp:ListItem>Male</asp:ListItem>
                 <asp:ListItem>Prefer Not To Say</asp:ListItem>

@@ -22,6 +22,22 @@
         <asp:TextBox ID="TextBox3" runat="server" TextMode="Password"></asp:TextBox>
 &nbsp;Re-Enter the New Password.<br />
         <br />
+        <asp:TextBox ID="NameTextBox5" runat="server"></asp:TextBox>
+&nbsp;Enter your Full Name.<br />
+        <br />
+        <asp:TextBox ID="EmailTextBox6" runat="server"></asp:TextBox>
+&nbsp;Enter your Email.<br />
+        <br />
+        Gender:&nbsp;&nbsp;&nbsp;&nbsp; <asp:RadioButtonList ID="MyGender" runat="server">
+                <asp:ListItem>Female</asp:ListItem>
+                <asp:ListItem>Male</asp:ListItem>
+                <asp:ListItem>Prefer Not To Say</asp:ListItem>
+        </asp:RadioButtonList>
+        <br />
+        <br />
+        <asp:TextBox ID="BirthdayTextBox7" runat="server"></asp:TextBox>
+&nbsp;Enter your Birthday. (ex: Month/Date/Year (12/31/2013)<br />
+        <br />
         <br />
         <br />
 &nbsp;&nbsp;&nbsp;
