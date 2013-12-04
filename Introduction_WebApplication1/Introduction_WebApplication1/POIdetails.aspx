@@ -10,32 +10,23 @@
     <form id="form1" runat="server">
     <div>
     
-        <br />
-        ==========================================================<br />
-        ==========================================================<br />
-    
-        <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ~ ~
-        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="ListPOIs.aspx">Return to the List of POIs</asp:HyperLink>
-&nbsp;~ ~<br />
-    
-        <br />
-        || &lt;&lt; || Welcome to the Web-Based Student Social Mobile Framework!&nbsp; || &gt;&gt; ||<br />
-        <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ||===========The POIs&nbsp; Details and Review============||<br />
-        <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        ~ ~
-        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="Login.aspx">Logout</asp:HyperLink>
-&nbsp;~ ~
-        <br />
-        <br />
-        ==========================================================<br />
-        ==========================================================<br />
-        <br />
+        <asp:Label ID="Title" runat="server" Text="Point Of Interest Details"></asp:Label>
         <br />
     
     </div>
+        <br />
+        <br />
+        <br />
+        <asp:Label ID="descriptionLabel" runat="server" Text="Description: "></asp:Label>
+        <br />
+        <asp:Label ID="resultLabel" runat="server" Text=" "></asp:Label>
+        <br />
+        <asp:Label ID="rLabel" runat="server" Text="..."></asp:Label>
+        <br />
+        <br />
+        Reviews:<br />
+        <br />
+        <asp:Label ID="reviewLabel" runat="server" Text=".."></asp:Label>
     </form>
 </body>
 </html>
