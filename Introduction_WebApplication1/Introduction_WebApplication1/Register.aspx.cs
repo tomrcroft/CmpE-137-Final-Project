@@ -25,12 +25,16 @@ namespace Introduction_WebApplication1
         {
             if (TextBox2.Text == TextBox3.Text)
             {
+                /*
                //SqlConnection myConnection = new SqlConnection("user id=xaigamer;" +
                 SqlConnection myConnection = new SqlConnection("user id=DavidHsu-PC;" +
                                        "server=localhost;" +
                                        "Trusted_Connection=yes;" +
                                        "database=FinalProject; " +
                                        "connection timeout=30");
+                //*/
+                SqlConnection myConnection = new SqlConnection("Persist Security Info=False;Integrated Security=true;Initial Catalog=FinalProject;server=(local)");
+
                 try
                 {
                     myConnection.Open();

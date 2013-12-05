@@ -44,7 +44,7 @@
         <p>
             <asp:CheckBoxList ID="FavoritePlaces" runat="server" DataSourceID="SqlFavePOIs" DataTextField="Name" DataValueField="ID">
             </asp:CheckBoxList>
-            <asp:SqlDataSource ID="SqlFavePOIs" runat="server" ConnectionString="<%$ ConnectionStrings:FinalProjectConnectionString %>" SelectCommand="SELECT [ID], [Name] FROM [POIs]"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlFavePOIs" runat="server" ConnectionString="<%$ ConnectionStrings:AlexConnectionString %>" SelectCommand="SELECT [ID], [Name] FROM [POIs]" OnSelecting="SqlFavePOIs_Selecting"></asp:SqlDataSource>
         </p>
         <asp:Button ID="Update" runat="server" OnClick="Update_Click" Text="Update" />
 &nbsp;

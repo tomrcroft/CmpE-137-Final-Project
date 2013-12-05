@@ -14,7 +14,8 @@ namespace Introduction_WebApplication1
         protected void Page_Load(object sender, EventArgs e)
         {
             this.Title.Font.Size = 48;
-            SqlConnection con = new SqlConnection(""); //connection string
+            //SqlConnection con = new SqlConnection(""); //connection string
+            SqlConnection con = new SqlConnection("Persist Security Info=False;Integrated Security=true;Initial Catalog=FinalProject;server=(local)");
             con.Open();
             //System.Windows.Forms.MessageBox.Show(con.State.ToString());
 
