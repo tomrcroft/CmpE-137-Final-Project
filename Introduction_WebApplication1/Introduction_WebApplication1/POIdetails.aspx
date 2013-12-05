@@ -14,9 +14,7 @@
         <br />
     
     </div>
-        <br />
-        <br />
-        <br />
+    <div>
         <asp:Label ID="descriptionLabel" runat="server" Text="Description: "></asp:Label>
         <br />
         <asp:Label ID="resultLabel" runat="server" Text=" "></asp:Label>
@@ -27,6 +25,7 @@
         Reviews:<br />
         <br />
         <asp:Label ID="reviewLabel" runat="server" Text=".."></asp:Label>
+    </div>
     </form>
 </body>
 </html>

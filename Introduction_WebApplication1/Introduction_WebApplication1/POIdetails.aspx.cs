@@ -28,7 +28,7 @@ namespace Introduction_WebApplication1
 
             //reviews
             SqlCommand cmd2 = con.CreateCommand();
-            cmd2.CommandText = "select Comments from Reviews where ID =" + i + ";";
+            cmd2.CommandText = "select Comment from Reviews where ID =" + i + ";";
             SqlDataReader r = cmd2.ExecuteReader();
             while (r.Read())
             {
