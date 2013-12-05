@@ -43,11 +43,6 @@ namespace Introduction_WebApplication1
                 //SqlCommand myCommand = new SqlCommand("INSERT INTO Users VALUES ('" + TextBox1.Text + "','" + TextBox2.Text + "');", myConnection);
                 SqlCommand myCommand = new SqlCommand("INSERT INTO Users VALUES ('" + TextBox1.Text + "','" + TextBox2.Text + "','" + NameTextBox5.Text + "','" + EmailTextBox6.Text + "','" + MyGender.Text + "','" + BirthdayTextBox7.Text + "');", myConnection);
 
-                /*Name.Text = userprofile["Name"].ToString();
-                Gender.Text = userprofile["Gender"].ToString();
-                Birthdate.Text = userprofile["Birthdate"].ToString();
-                Email.Text = userprofile["Email"].ToString();*/
-
                 try
                 {
                     myCommand.ExecuteNonQuery();
@@ -56,9 +51,6 @@ namespace Introduction_WebApplication1
                     Session["Username"] = TextBox1.Text;                    
                     Response.Redirect("ListPOIs.aspx");                    
                     //Response.Redirect("ListPOIs.aspx");
-
-                    Session["Username"] = TextBox1.Text;
-                    Response.Redirect("ListPOIs.aspx");
         
                 }
                 catch(SqlException sqlerror)
