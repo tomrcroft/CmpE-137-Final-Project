@@ -16,13 +16,14 @@ namespace Introduction_WebApplication1
             {
                 //Setup database connection
                 SqlCommand command = new SqlCommand();
-               // SqlConnection conn = new SqlConnection("Persist Security Info=False;Integrated Security=true;Initial Catalog=FinalProject;server=(local)");
-
+                SqlConnection conn = new SqlConnection("Persist Security Info=False;Integrated Security=true;Initial Catalog=FinalProject;server=(local)");
+                /*
                 SqlConnection conn = new SqlConnection("user id=DavidHsu-PC;" +
                                        "server=localhost;" +
                                        "Trusted_Connection=yes;" +
                                        "database=FinalProject; " +
                                        "connection timeout=30");
+                //*/
 
                 //Query to get data from database User table
                 string PoiQuery = "Use FinalProject; Select ID, Name, Description from POIs";
@@ -80,6 +81,10 @@ namespace Introduction_WebApplication1
                 }
                 myReader.Close();
                 conn.Close();             
+            }
+            else
+            {
+                Response.Redirect("Login.aspx");     
             }
 
         }

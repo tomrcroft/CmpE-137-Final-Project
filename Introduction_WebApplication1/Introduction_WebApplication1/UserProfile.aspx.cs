@@ -14,12 +14,16 @@ namespace Introduction_WebApplication1
         {
             Label1.Text = Session["Username"].ToString();
 
+            /*
             //SqlConnection myConnection = new SqlConnection("user id=xaigamer;" +
             SqlConnection myConnection = new SqlConnection("user id=DavidHsu-PC;" +
                                    "server=localhost;" +
                                    "Trusted_Connection=yes;" +
                                    "database=FinalProject; " +
                                    "connection timeout=30");
+            //*/
+            SqlConnection myConnection = new SqlConnection("Persist Security Info=False;Integrated Security=true;Initial Catalog=FinalProject;server=(local)");
+
             try
             {
                 myConnection.Open();
@@ -49,12 +53,15 @@ namespace Introduction_WebApplication1
 
         protected void Update_Click(object sender, EventArgs e)
         {
+            /*
                //SqlConnection myConnection = new SqlConnection("user id=xaigamer;" +
             SqlConnection myConnection = new SqlConnection("user id=DavidHsu-PC;" +
                                      "server=localhost;" +
                                      "Trusted_Connection=yes;" +
                                      "database=FinalProject; " +
                                      "connection timeout=30");
+             //*/
+            SqlConnection myConnection = new SqlConnection("Persist Security Info=False;Integrated Security=true;Initial Catalog=FinalProject;server=(local)");
                 try
                 {
                     myConnection.Open();
