@@ -13,7 +13,6 @@ namespace Introduction_WebApplication1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            this.Title.Font.Size = 48;
             //SqlConnection con = new SqlConnection(""); //connection string
             SqlConnection con = new SqlConnection("Persist Security Info=False;Integrated Security=true;Initial Catalog=FinalProject;server=(local)");
             con.Open();
@@ -24,7 +23,15 @@ namespace Introduction_WebApplication1
             int i = Convert.ToInt32(Request.QueryString["ID"]);
             cmd.CommandText = "select Description from POIs where ID =" + i + ";";
             string desc = (string)cmd.ExecuteScalar();
-            this.rLabel.Text = desc;
+
+            TableRow descrow = new TableRow();
+            descriptionTable.Rows.Add(descrow);
+
+            TableCell desccell = new TableCell();
+            desccell.Text = desc;
+            descrow.Cells.Add(desccell);
+
+            
 
             //reviews
             SqlCommand cmd2 = con.CreateCommand();
@@ -32,7 +39,14 @@ namespace Introduction_WebApplication1
             SqlDataReader r = cmd2.ExecuteReader();
             while (r.Read())
             {
-                reviewLabel.Text += r["Comment"].ToString() + "\n";
+                //reviewLabel.Text += r["Comment"].ToString() + System.Environment.NewLine;
+                TableRow row = new TableRow();
+                reviewTable.Rows.Add(row);
+
+                TableCell cell = new TableCell();
+                cell.Text = r["Comment"].ToString();
+                row.Cells.Add(cell);
+
             }
 
             con.Close();
