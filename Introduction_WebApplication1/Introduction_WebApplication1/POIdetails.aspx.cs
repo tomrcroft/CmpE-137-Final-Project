@@ -28,11 +28,11 @@ namespace Introduction_WebApplication1
 
             //reviews
             SqlCommand cmd2 = con.CreateCommand();
-            cmd2.CommandText = "select Comment from Reviews where ID =" + i + ";";
+            cmd2.CommandText = "select Comment from Reviews where PoiIDs =" + i + ";";
             SqlDataReader r = cmd2.ExecuteReader();
             while (r.Read())
             {
-                reviewLabel.Text += r.NextResult().ToString() + "\n";
+                reviewLabel.Text += r["Comment"].ToString() + "\n";
             }
 
             con.Close();
