@@ -49,6 +49,15 @@ namespace Introduction_WebApplication1 {
         protected global::System.Web.UI.WebControls.TextBox reviewTextbox;
         
         /// <summary>
+        /// ratingList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ratingList;
+        
+        /// <summary>
         /// submitButton control.
         /// </summary>
         /// <remarks>

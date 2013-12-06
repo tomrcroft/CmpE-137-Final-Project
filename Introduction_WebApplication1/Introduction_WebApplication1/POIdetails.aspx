@@ -21,11 +21,20 @@
     </div>
         
         <div>
-        <h2>Reviews</h2>
+        <h2>Reviews and ratings</h2>
         <asp:Table ID="reviewTable" runat="server"></asp:Table>
             <br />
     </div>
-        <asp:TextBox ID="reviewTextbox" runat="server" Height="61px" Width="138px"></asp:TextBox>
+        <asp:TextBox ID="reviewTextbox" runat="server" Height="20px" Width="128px">Review</asp:TextBox>
+        <br />
+        <br />
+        <asp:DropDownList ID="ratingList" runat="server">
+            <asp:ListItem Value="1"></asp:ListItem>
+            <asp:ListItem Value="2"></asp:ListItem>
+            <asp:ListItem Value="3"></asp:ListItem>
+            <asp:ListItem Value="4"></asp:ListItem>
+            <asp:ListItem Value="5"></asp:ListItem>
+        </asp:DropDownList>
         <br />
         <br />
         <asp:Button ID="submitButton" runat="server" OnClick="submitButton_Click" Text="Submit Review" />

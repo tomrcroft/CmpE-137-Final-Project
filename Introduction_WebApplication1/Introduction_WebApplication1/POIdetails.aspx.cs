@@ -35,12 +35,9 @@ namespace Introduction_WebApplication1
 
             //reviews
             SqlCommand cmd2 = con.CreateCommand();
-            cmd2.CommandText = "select Comment from Reviews where PoiIDs =" + i + ";";
+            cmd2.CommandText = "select Comment, rating from Reviews where PoiIDs =" + i + ";";
             SqlDataReader r = cmd2.ExecuteReader();
-            SqlCommand cmdrate = con.CreateCommand();
-            cmdrate.CommandText = "select rating from Reviews where PoiIDs =" + i + ";";
-            SqlDataReader rateReader = cmdrate.ExecuteReader();
-            while (r.Read() && rateReader.Read())
+            while (r.Read())
             {
                 //reviewLabel.Text += r["Comment"].ToString() + System.Environment.NewLine;
                 TableRow row = new TableRow();
@@ -50,8 +47,12 @@ namespace Introduction_WebApplication1
                 cell.Text = r["Comment"].ToString();
                 row.Cells.Add(cell);
 
+                TableCell bufferCell = new TableCell();
+                bufferCell.Text = "Rating: ";
+                row.Cells.Add(bufferCell);
+
                 TableCell rateCell = new TableCell();
-                rateCell.Text = rateReader["rating"].ToString();
+                rateCell.Text = r["rating"].ToString();
                 row.Cells.Add(rateCell);
 
             }
@@ -65,11 +66,12 @@ namespace Introduction_WebApplication1
             int i = Convert.ToInt32(Request.QueryString["ID"]);
             String s = reviewTextbox.Text;
             String user = Session["Username"].ToString();
+            int rev = Convert.ToInt32(this.ratingList.SelectedValue);
             SqlConnection con = new SqlConnection("Persist Security Info=False;Integrated Security=true;Initial Catalog=FinalProject;server=(local)");
             con.Open();
 
             SqlCommand cmd = con.CreateCommand();
-            cmd.CommandText = "insert into Reviews values('"+ user +"', "+ i + ", '"+ s +"', 1);";
+            cmd.CommandText = "insert into Reviews values('"+ user +"', "+ i + ", '"+ s +"', " + rev + ");";
             cmd.ExecuteNonQuery();
             //name poid comment rating
             Response.Redirect(Request.RawUrl);
