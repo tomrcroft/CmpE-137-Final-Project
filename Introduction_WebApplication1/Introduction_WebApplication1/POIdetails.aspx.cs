@@ -37,7 +37,10 @@ namespace Introduction_WebApplication1
             SqlCommand cmd2 = con.CreateCommand();
             cmd2.CommandText = "select Comment from Reviews where PoiIDs =" + i + ";";
             SqlDataReader r = cmd2.ExecuteReader();
-            while (r.Read())
+            SqlCommand cmdrate = con.CreateCommand();
+            cmdrate.CommandText = "select rating from Reviews where PoiIDs =" + i + ";";
+            SqlDataReader rateReader = cmdrate.ExecuteReader();
+            while (r.Read() && rateReader.Read())
             {
                 //reviewLabel.Text += r["Comment"].ToString() + System.Environment.NewLine;
                 TableRow row = new TableRow();
@@ -46,6 +49,10 @@ namespace Introduction_WebApplication1
                 TableCell cell = new TableCell();
                 cell.Text = r["Comment"].ToString();
                 row.Cells.Add(cell);
+
+                TableCell rateCell = new TableCell();
+                rateCell.Text = rateReader["rating"].ToString();
+                row.Cells.Add(rateCell);
 
             }
 
@@ -57,11 +64,13 @@ namespace Introduction_WebApplication1
         {
             int i = Convert.ToInt32(Request.QueryString["ID"]);
             String s = reviewTextbox.Text;
+            String user = Session["Username"].ToString();
             SqlConnection con = new SqlConnection("Persist Security Info=False;Integrated Security=true;Initial Catalog=FinalProject;server=(local)");
             con.Open();
 
             SqlCommand cmd = con.CreateCommand();
-            cmd.CommandText = "insert into Reviews values(null, "+ i + ", '"+ s +"', 1);";
+            cmd.CommandText = "insert into Reviews values('"+ user +"', "+ i + ", '"+ s +"', 1);";
+            cmd.ExecuteNonQuery();
             //name poid comment rating
             Response.Redirect(Request.RawUrl);
 
