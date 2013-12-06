@@ -23,7 +23,12 @@
         <div>
         <h2>Reviews</h2>
         <asp:Table ID="reviewTable" runat="server"></asp:Table>
+            <br />
     </div>
+        <asp:TextBox ID="reviewTextbox" runat="server" Height="61px" Width="138px"></asp:TextBox>
+        <br />
+        <br />
+        <asp:Button ID="submitButton" runat="server" OnClick="submitButton_Click" Text="Submit Review" />
     </form>
 </body>
 </html>

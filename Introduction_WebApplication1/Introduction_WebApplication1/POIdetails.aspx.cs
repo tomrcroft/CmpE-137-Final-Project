@@ -53,5 +53,21 @@ namespace Introduction_WebApplication1
             
         }
 
+        protected void submitButton_Click(object sender, EventArgs e)
+        {
+            int i = Convert.ToInt32(Request.QueryString["ID"]);
+            String s = reviewTextbox.Text;
+            SqlConnection con = new SqlConnection("Persist Security Info=False;Integrated Security=true;Initial Catalog=FinalProject;server=(local)");
+            con.Open();
+
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandText = "insert into Reviews values(null, "+ i + ", '"+ s +"', 1);";
+            //name poid comment rating
+            Response.Redirect(Request.RawUrl);
+
+            con.Close();
+
+        }
+
     }
 }
